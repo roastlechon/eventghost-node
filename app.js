@@ -21,8 +21,7 @@ var sendCommand = function(command) {
 	});
 
 	connection.on('data', function(data) {
-		var e = data.toString()
-		e = string(e).trim().s;
+		e = string(data).trim().s;
 		if (e === "accept") {
 			console.log("sending command");
 			connection.write(command + "\n");
